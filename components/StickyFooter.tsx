@@ -6,7 +6,7 @@ type Props = {};
 const StickyFooter = (props: Props) => {
   return (
     <Link href="#hero">
-      <footer className="sticky bottom-2 w-full cursor-pointer">
+      <footer className="sticky bottom-2 w-full cursor-pointer z-30">
         <div className="flex items-center justify-center">
           <Image
             src="/logo.png"

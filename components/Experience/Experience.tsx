@@ -19,40 +19,46 @@ const Experience = (props: Props) => {
         {data.map((item, i) => (
           <article
             key={i}
-            className="flex-shrink-0 w-full md:w-[500px] rounded-lg bg-slate-800 cursor-pointer hover:opacity-70 snap-center"
+            className="flex-shrink-0 w-full md:w-[500px] rounded-lg bg-slate-800 cursor-pointer hover:opacity-70 snap-center text-center md:text-left"
           >
-            <div className="flex flex-col justify-center items-center p-4 md:p-8 gap-2">
-              <motion.div
-                initial={{
-                  y: -100,
-                  opacity: 0,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 1.2,
-                }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src={item.url}
-                  alt={item.alt}
-                  width={140}
-                  height={140}
-                  className="rounded-full object-cover h-20 md:h-32 w-20 md:w-32"
-                  priority
-                />
-              </motion.div>
+            <div className="flex flex-col justify-center items-stretch p-4 md:p-8 gap-2">
+              <div className="flex flex-col md:flex-row justify-center items-center">
+                <div className="basis-1/3">
+                  <motion.div
+                    initial={{
+                      y: -100,
+                      opacity: 0,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 1.2,
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    <Image
+                      src={item.url}
+                      alt={item.alt}
+                      width={140}
+                      height={140}
+                      className="rounded-full object-cover h-20 md:h-32 w-20 md:w-32"
+                      priority
+                    />
+                  </motion.div>
+                </div>
+                <div className="basis-2/3">
+                  <h4 className="text-xl md:text-3xl font-light">
+                    {item.designation}
+                  </h4>
+                  <p className="font-bold mt-1 text-lg md:text-2xl ">
+                    {item.company}
+                  </p>
+                </div>
+              </div>
               <div>
-                <h4 className="text-xl md:text-3xl font-light">
-                  {item.designation}
-                </h4>
-                <p className="font-bold mt-1 text-lg md:text-2xl ">
-                  {item.company}
-                </p>
-                <div className="flex space-x-2 my-2">
+                <div className="flex flex-wrap gap-2 my-2 justify-center md:justify-start">
                   {item.skills.map((skillItem, j) => (
                     <Image
                       src={skillItem.url}
@@ -68,7 +74,7 @@ const Experience = (props: Props) => {
                 <p className="uppercase py-5 text-slate-400 text-sm md:text-base">
                   Started {item.from} - {item.to}
                 </p>
-                <ul className="list-disc space-y-2 ml-5 text-sm md:text-base">
+                <ul className="space-y-2 text-sm md:text-base">
                   {item.summary.map((summaryItem, k) => (
                     <li key={k}>{summaryItem}</li>
                   ))}
