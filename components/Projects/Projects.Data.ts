@@ -1,5 +1,13 @@
 const data = [
   {
+    name: "Reach Fence",
+    description:
+      "Reach Fence is a responsive web app which performs CRUD of contacts.",
+    repository: "https://github.com/sakrko3/reach-fence",
+    livelink: "https://reach-fence.vercel.app/",
+    url: "/projects/reach-fence.png",
+  },
+  {
     name: "Arrotz",
     description:
       "A responsive website made with NextJS, to avail seamless SSR.",
