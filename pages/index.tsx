@@ -18,15 +18,17 @@ const index = (props: Props) => {
         <meta name="description" content="Sai Krishna's Portfolio" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <div className="bg-slate-900 text-slate-50 h-screen scrollbar-thin scrollbar-track-slate-400/20 scrollbar-thumb-indigo-500/80 snap-y snap-mandatory">
-        <Header />
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
-        <StickyFooter />
+      <div className="h-screen scrollbar-thin scrollbar-track-slate-400/20 scrollbar-thumb-indigo-500/80 snap-y snap-mandatory">
+        <div className="bg-slate-900 text-slate-50">
+          <Header />
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Contact />
+          <StickyFooter />
+        </div>
       </div>
     </div>
   );
