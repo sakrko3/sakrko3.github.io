@@ -23,7 +23,7 @@ const Contact = (props: Props) => {
       <div className="space-y-5">
         <div className="flex items-center space-x-2 justify-center">
           <EnvelopeIcon className="text-indigo-500 h-7 w-7 animate-pulse" />
-          <p>saikrishnak930@gmail.com</p>
+          <p>skkonda39@gmail.com</p>
         </div>
         <div className="flex items-center space-x-2 justify-center">
           <MapPinIcon className="text-indigo-500 h-7 w-7 animate-pulse" />

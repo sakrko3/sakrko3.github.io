@@ -31,7 +31,7 @@ const Header = (props: Props) => {
           network="email"
           fgColor="#94a3b8"
           bgColor="transparent"
-          url="mailto:saikrishnak930@gmail.com"
+          url="mailto:skkonda39@gmail.com"
         />
         <p className="uppercase hidden md:inline-flex text-sm text-slate-400 font-medium">
           Lets Connect
