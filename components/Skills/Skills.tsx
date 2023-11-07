@@ -21,7 +21,7 @@ const Skills = () => {
         current profieciency
       </h4>
       <div className="flex flex-wrap gap-4 justify-center items-center ">
-        {data.map((item, i) => (
+        {data.map((item) => (
           <div key={item.alt} className="group relative flex cursor-pointer">
             <Image
               src={item.url}

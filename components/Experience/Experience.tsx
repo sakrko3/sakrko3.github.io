@@ -14,28 +14,68 @@ interface ExperienceItem {
   summary: string[];
 }
 
-const Experience = () => {
-  return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      id="experience"
-      className="min-h-screen px-4 max-w-7xl mx-auto relative flex justify-center items-center snap-center"
-    >
-      <SectionHeader name="Experience" />
-      <div className="flex space-x-5 overflow-x-scroll w-full rounded-lg py-4  scrollbar-thin scrollbar-track-slate-700/80  scrollbar-thumb-indigo-500/60 snap-x snap-mandatory">
-        {data.map((item, i) => (
-          <ExperienceItemComponent key={item.alt} item={item} />
-        ))}
-      </div>
-    </motion.section>
-  );
-};
-
 interface ExperienceItemProps {
   item: ExperienceItem;
 }
+
+interface ExperienceSkillsProps {
+  skills: { url: string; alt: string }[];
+}
+
+interface ExperienceSummaryProps {
+  summary: string[];
+}
+
+const ExperienceImageComponent: React.FC<ExperienceItemProps> = ({ item }) => {
+  return (
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2 }}
+      viewport={{ once: true }}
+    >
+      <Image
+        src={item.url}
+        alt={item.alt}
+        width={140}
+        height={140}
+        className="rounded-full object-cover h-20 md:h-32 w-20 md:w-32"
+        priority
+      />
+    </motion.div>
+  );
+};
+
+
+const ExperienceSkillsComponent: React.FC<ExperienceSkillsProps> = ({ skills }) => {
+  return (
+    <div className="flex flex-wrap gap-2 my-2 justify-center md:justify-start">
+      {skills.map((skillItem) => (
+        <Image
+          src={skillItem.url}
+          alt={skillItem.alt}
+          width={140}
+          height={140}
+          className="rounded-full object-cover h-6 w-6"
+          priority
+          key={skillItem.alt}
+        />
+      ))}
+    </div>
+  );
+};
+
+
+const ExperienceSummaryComponent: React.FC<ExperienceSummaryProps> = ({ summary }) => {
+  return (
+    <ul className="space-y-2 text-sm md:text-base">
+      {summary.map((summaryItem) => (
+        <li key={summaryItem}>{summaryItem}</li>
+      ))}
+    </ul>
+  );
+};
+
 
 const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
   return (
@@ -62,59 +102,23 @@ const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
   );
 };
 
-const ExperienceImageComponent: React.FC<ExperienceItemProps> = ({ item }) => {
+
+const Experience = () => {
   return (
-    <motion.div
-      initial={{ y: -100, opacity: 0 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2 }}
-      viewport={{ once: true }}
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      id="experience"
+      className="min-h-screen px-4 max-w-7xl mx-auto relative flex justify-center items-center snap-center"
     >
-      <Image
-        src={item.url}
-        alt={item.alt}
-        width={140}
-        height={140}
-        className="rounded-full object-cover h-20 md:h-32 w-20 md:w-32"
-        priority
-      />
-    </motion.div>
-  );
-};
-
-interface ExperienceSkillsProps {
-  skills: { url: string; alt: string }[];
-}
-
-const ExperienceSkillsComponent: React.FC<ExperienceSkillsProps> = ({ skills }) => {
-  return (
-    <div className="flex flex-wrap gap-2 my-2 justify-center md:justify-start">
-      {skills.map((skillItem, j) => (
-        <Image
-          src={skillItem.url}
-          alt={skillItem.alt}
-          width={140}
-          height={140}
-          className="rounded-full object-cover h-6 w-6"
-          priority
-          key={skillItem.alt}
-        />
-      ))}
-    </div>
-  );
-};
-
-interface ExperienceSummaryProps {
-  summary: string[];
-}
-
-const ExperienceSummaryComponent: React.FC<ExperienceSummaryProps> = ({ summary }) => {
-  return (
-    <ul className="space-y-2 text-sm md:text-base">
-      {summary.map((summaryItem, k) => (
-        <li key={summaryItem}>{summaryItem}</li>
-      ))}
-    </ul>
+      <SectionHeader name="Experience" />
+      <div className="flex space-x-5 overflow-x-scroll w-full rounded-lg py-4  scrollbar-thin scrollbar-track-slate-700/80  scrollbar-thumb-indigo-500/60 snap-x snap-mandatory">
+        {data.map((item) => (
+          <ExperienceItemComponent key={item.alt} item={item} />
+        ))}
+      </div>
+    </motion.section>
   );
 };
 
