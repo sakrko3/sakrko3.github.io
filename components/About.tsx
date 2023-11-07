@@ -2,7 +2,6 @@ import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 import { motion } from "framer-motion";
 
-
 const AboutText: React.FC = () => {
   return (
     <div className="basis-3/4 flex flex-col space-y-4 justify-content">
@@ -13,17 +12,16 @@ const AboutText: React.FC = () => {
       </h4>{" "}
       <p className="text-sm md:text-base">
         I&apos;m an aspiring developer with expertise in the design, developing,
-        testing, and maintenance of multiple personal and professional
-        projects. Equipped with a diverse and promising cutting-edge
-        skill-set spanning numerous domains and technologies. Able to
-        effectively self-manage during independent projects, as well as
-        collaborate as part of a productive team. Always try to seek new
-        challenges and love to explore new technologies.
+        testing, and maintenance of multiple personal and professional projects.
+        Equipped with a diverse and promising cutting-edge skill-set spanning
+        numerous domains and technologies. Able to effectively self-manage
+        during independent projects, as well as collaborate as part of a
+        productive team. Always try to seek new challenges and love to explore
+        new technologies.
       </p>
     </div>
   );
 };
-
 
 const AboutContent: React.FC = () => {
   const imageVariants = {
@@ -55,14 +53,12 @@ const AboutContent: React.FC = () => {
   );
 };
 
-
 const About: React.FC = () => {
   const sectionVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
     transition: { duration: 1.5 },
   };
-
 
   return (
     <motion.section
@@ -77,6 +73,5 @@ const About: React.FC = () => {
     </motion.section>
   );
 };
-
 
 export default About;
