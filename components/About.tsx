@@ -49,12 +49,12 @@ const About: React.FC = () => {
             background
           </h4>{" "}
           <p className="text-sm md:text-base">
-            I&apos;m an aspiring developer with expertise in the design, developing,
-            testing, and maintenance of multiple personal and professional
-            projects. Equipped with a diverse and promising cutting-edge
-            skill-set spanning numerous domains and technologies. Able to
-            effectively self-manage during independent projects, as well as
-            collaborate as part of a productive team. Always try to seek new
+            I&apos;m an aspiring developer with expertise in the design,
+            developing, testing, and maintenance of multiple personal and
+            professional projects. Equipped with a diverse and promising
+            cutting-edge skill-set spanning numerous domains and technologies.
+            Able to effectively self-manage during independent projects, as well
+            as collaborate as part of a productive team. Always try to seek new
             challenges and love to explore new technologies.
           </p>
         </div>

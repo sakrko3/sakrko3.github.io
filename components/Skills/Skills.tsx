@@ -3,7 +3,6 @@ import SectionHeader from "../SectionHeader";
 import data from "./Skills.Data";
 import { motion } from "framer-motion";
 
-
 const Skills = () => {
   return (
     <motion.section

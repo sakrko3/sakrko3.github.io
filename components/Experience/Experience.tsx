@@ -46,8 +46,9 @@ const ExperienceImageComponent: React.FC<ExperienceItemProps> = ({ item }) => {
   );
 };
 
-
-const ExperienceSkillsComponent: React.FC<ExperienceSkillsProps> = ({ skills }) => {
+const ExperienceSkillsComponent: React.FC<ExperienceSkillsProps> = ({
+  skills,
+}) => {
   return (
     <div className="flex flex-wrap gap-2 my-2 justify-center md:justify-start">
       {skills.map((skillItem) => (
@@ -65,8 +66,9 @@ const ExperienceSkillsComponent: React.FC<ExperienceSkillsProps> = ({ skills }) 
   );
 };
 
-
-const ExperienceSummaryComponent: React.FC<ExperienceSummaryProps> = ({ summary }) => {
+const ExperienceSummaryComponent: React.FC<ExperienceSummaryProps> = ({
+  summary,
+}) => {
   return (
     <ul className="space-y-2 text-sm md:text-base">
       {summary.map((summaryItem) => (
@@ -75,7 +77,6 @@ const ExperienceSummaryComponent: React.FC<ExperienceSummaryProps> = ({ summary 
     </ul>
   );
 };
-
 
 const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
   return (
@@ -86,8 +87,12 @@ const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
             <ExperienceImageComponent item={item} />
           </div>
           <div className="basis-2/3">
-            <h4 className="text-xl md:text-3xl font-light">{item.designation}</h4>
-            <p className="font-bold mt-1 text-lg md:text-2xl ">{item.company}</p>
+            <h4 className="text-xl md:text-3xl font-light">
+              {item.designation}
+            </h4>
+            <p className="font-bold mt-1 text-lg md:text-2xl ">
+              {item.company}
+            </p>
           </div>
         </div>
         <div>
@@ -101,7 +106,6 @@ const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
     </article>
   );
 };
-
 
 const Experience = () => {
   return (
