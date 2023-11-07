@@ -1,9 +1,7 @@
-import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 
-type Props = {};
 
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <header
       id="nav"

@@ -3,9 +3,8 @@ import SectionHeader from "./SectionHeader";
 import { EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
-type Props = {};
 
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}

@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {};
 
-const StickyFooter = (props: Props) => {
+const StickyFooter = () => {
   return (
     <Link href="#hero">
       <footer className="sticky bottom-2 w-full cursor-pointer z-30">

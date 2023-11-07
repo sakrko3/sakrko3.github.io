@@ -2,34 +2,35 @@ import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 import { motion } from "framer-motion";
 
-type Props = {};
+const About: React.FC = () => {
+  const sectionVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { duration: 1.5 },
+  };
 
-const About = (props: Props) => {
+  const imageVariants = {
+    initial: { x: -200, opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
+    transition: { duration: 1.2 },
+    viewport: { once: true },
+  };
+
   return (
     <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
+      initial={sectionVariants.initial}
+      animate={sectionVariants.animate}
+      transition={sectionVariants.transition}
       id="about"
       className="min-h-screen px-4 lg:max-w-7xl mx-auto text-center relative lg:text-left snap-center"
     >
       <SectionHeader name="About" />
       <div className="min-h-screen flex items-center justify-center gap-6 flex-col lg:flex-row">
         <motion.div
-          initial={{
-            x: -200,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1.2,
-          }}
-          viewport={{
-            once: true,
-          }}
+          initial={imageVariants.initial}
+          whileInView={imageVariants.whileInView}
+          transition={imageVariants.transition}
+          viewport={imageVariants.viewport}
           className="basis-1/4 flex items-center justify-center"
         >
           <Image
@@ -37,7 +38,7 @@ const About = (props: Props) => {
             alt="Profile pic"
             width={200}
             height={200}
-            className="rounded-lg h-52 w-52 lg:h-80 lg:w-80 object-cover "
+            className="rounded-lg h-52 w-52 lg:h-80 lg:w-80 object-cover"
             priority
           />
         </motion.div>
@@ -48,7 +49,7 @@ const About = (props: Props) => {
             background
           </h4>{" "}
           <p className="text-sm md:text-base">
-            Im an aspiring developer with expertise in the design, developing,
+            I'm an aspiring developer with expertise in the design, developing,
             testing, and maintenance of multiple personal and professional
             projects. Equipped with a diverse and promising cutting-edge
             skill-set spanning numerous domains and technologies. Able to

@@ -4,9 +4,8 @@ import SectionHeader from "../SectionHeader";
 import data from "./Projects.Data";
 import { motion } from "framer-motion";
 
-type Props = {};
 
-const Projects = (props: Props) => {
+const Projects = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -21,7 +20,7 @@ const Projects = (props: Props) => {
         <div className="w-full flex overflow-x-scroll rounded-lg z-20 scrollbar-thin scrollbar-track-slate-700/80  scrollbar-thumb-indigo-500/60 snap-x snap-mandatory">
           {data.map((item, i) => (
             <article
-              key={i}
+              key={item.name}
               className="flex-shrink-0 w-full flex justify-center items-center h-screen flex-col space-y-5 snap-center"
             >
               <Image

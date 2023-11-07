@@ -8,9 +8,8 @@ import Projects from "../components/Projects/Projects";
 import Contact from "../components/Contact";
 import StickyFooter from "../components/StickyFooter";
 
-type Props = {};
 
-const index = (props: Props) => {
+const index = () => {
   return (
     <div>
       <Head>

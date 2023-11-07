@@ -3,10 +3,9 @@ import BackgroundCircles from "./BackgroundCircles";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Link from "next/link";
 
-type Props = {};
 
-const Hero = (props: Props) => {
-  const [text, count] = useTypewriter({
+const Hero = () => {
+  const [text] = useTypewriter({
     words: ["Hi, I'm Sai Krishna", "And, I caught fire Coding"],
     loop: true,
     delaySpeed: 3000,

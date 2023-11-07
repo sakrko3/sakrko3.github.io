@@ -3,9 +3,8 @@ import SectionHeader from "../SectionHeader";
 import data from "./Skills.Data";
 import { motion } from "framer-motion";
 
-type Props = {};
 
-const Skills = (props: Props) => {
+const Skills = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -23,7 +22,7 @@ const Skills = (props: Props) => {
       </h4>
       <div className="flex flex-wrap gap-4 justify-center items-center ">
         {data.map((item, i) => (
-          <div key={i} className="group relative flex cursor-pointer">
+          <div key={item.alt} className="group relative flex cursor-pointer">
             <Image
               src={item.url}
               width={200}
