@@ -3,7 +3,6 @@ import SectionHeader from "./SectionHeader";
 import { EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
-
 const Contact = () => {
   return (
     <motion.section

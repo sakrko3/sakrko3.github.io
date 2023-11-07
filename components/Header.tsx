@@ -1,6 +1,5 @@
 import { SocialIcon } from "react-social-icons";
 
-
 const Header = () => {
   return (
     <header

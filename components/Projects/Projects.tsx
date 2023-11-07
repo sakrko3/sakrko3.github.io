@@ -4,7 +4,6 @@ import SectionHeader from "../SectionHeader";
 import data from "./Projects.Data";
 import { motion } from "framer-motion";
 
-
 const Projects = () => {
   return (
     <motion.section

@@ -8,7 +8,6 @@ import Projects from "../components/Projects/Projects";
 import Contact from "../components/Contact";
 import StickyFooter from "../components/StickyFooter";
 
-
 const index = () => {
   return (
     <div>

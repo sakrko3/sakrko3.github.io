@@ -3,7 +3,6 @@ import BackgroundCircles from "./BackgroundCircles";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Link from "next/link";
 
-
 const Hero = () => {
   const [text] = useTypewriter({
     words: ["Hi, I'm Sai Krishna", "And, I caught fire Coding"],

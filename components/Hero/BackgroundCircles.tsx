@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-
 const BackgroundCircles = () => {
   return (
     <motion.div
