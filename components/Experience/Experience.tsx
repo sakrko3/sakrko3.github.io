@@ -47,8 +47,9 @@ const ExperienceImageComponent: React.FC<ExperienceItemProps> = ({ item }) => {
   );
 };
 
-
-const ExperienceSkillsComponent: React.FC<ExperienceSkillsProps> = ({ skills }) => {
+const ExperienceSkillsComponent: React.FC<ExperienceSkillsProps> = ({
+  skills,
+}) => {
   return (
     <div className="flex flex-wrap gap-2 my-2 justify-center md:justify-start">
       {skills.map((skillItem) => (
@@ -66,8 +67,9 @@ const ExperienceSkillsComponent: React.FC<ExperienceSkillsProps> = ({ skills }) 
   );
 };
 
-
-const ExperienceSummaryComponent: React.FC<ExperienceSummaryProps> = ({ summary }) => {
+const ExperienceSummaryComponent: React.FC<ExperienceSummaryProps> = ({
+  summary,
+}) => {
   return (
     <ul className="space-y-2 text-sm md:text-base">
       {summary.map((summaryItem) => (
@@ -86,7 +88,6 @@ const ExperienceItemWrapper = ({ children }: { children: ReactNode }) => {
     </article>
   );
 };
-
 
 const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
   return (
@@ -110,7 +111,6 @@ const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
     </ExperienceItemWrapper>
   );
 };
-
 
 const Experience = () => {
   return (
