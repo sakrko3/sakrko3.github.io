@@ -30,7 +30,7 @@ const data = [
     to: "Present",
     summary: [
       "Developed web applications with a focus on both front-end and back-end technologies, ensuring a seamless user experience.",
-      "Managed application performance, security, and scalability while continuously enhancing features through regular updates and deployments."
+      "Managed application performance, security, and scalability while continuously enhancing features through regular updates and deployments.",
     ],
   },
   {
