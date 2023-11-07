@@ -2,6 +2,7 @@ import Image from "next/image";
 import SectionHeader from "../SectionHeader";
 import data from "./Experience.Data";
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 interface ExperienceItem {
   url: string;
@@ -76,29 +77,37 @@ const ExperienceSummaryComponent: React.FC<ExperienceSummaryProps> = ({ summary 
   );
 };
 
-
-const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
+const ExperienceItemWrapper = ({ children }: { children: ReactNode }) => {
   return (
     <article className="flex-shrink-0 w-full md:w-[500px] rounded-lg bg-slate-800 cursor-pointer hover:opacity-70 snap-center text-center md:text-left">
       <div className="flex flex-col justify-center items-stretch p-4 md:p-8 gap-2">
-        <div className="flex flex-col md:flex-row justify-center items-center">
-          <div className="basis-1/3">
-            <ExperienceImageComponent item={item} />
-          </div>
-          <div className="basis-2/3">
-            <h4 className="text-xl md:text-3xl font-light">{item.designation}</h4>
-            <p className="font-bold mt-1 text-lg md:text-2xl ">{item.company}</p>
-          </div>
-        </div>
-        <div>
-          <ExperienceSkillsComponent skills={item.skills} />
-          <p className="uppercase py-5 text-slate-400 text-sm md:text-base">
-            Started {item.from} - {item.to}
-          </p>
-          <ExperienceSummaryComponent summary={item.summary} />
-        </div>
+        {children}
       </div>
     </article>
+  );
+};
+
+
+const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item }) => {
+  return (
+    <ExperienceItemWrapper>
+      <div className="flex flex-col md:flex-row justify-center items-center">
+        <div className="basis-1/3">
+          <ExperienceImageComponent item={item} />
+        </div>
+        <div className="basis-2/3">
+          <h4 className="text-xl md:text-3xl font-light">{item.designation}</h4>
+          <p className="font-bold mt-1 text-lg md:text-2xl ">{item.company}</p>
+        </div>
+      </div>
+      <div>
+        <ExperienceSkillsComponent skills={item.skills} />
+        <p className="uppercase py-5 text-slate-400 text-sm md:text-base">
+          Started {item.from} - {item.to}
+        </p>
+        <ExperienceSummaryComponent summary={item.summary} />
+      </div>
+    </ExperienceItemWrapper>
   );
 };
 
